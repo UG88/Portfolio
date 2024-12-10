@@ -1,0 +1,307 @@
+/* Plugin Header Styles */
+.plugins-header {
+    min-height: 50vh;
+    background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.95)),
+                url('/images/plugins-bg.jpg') center/cover;
+    padding: 100px 50px;
+    margin-bottom: 50px;
+}
+
+/* Plugin Gallery */
+.plugins-gallery {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.plugins-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.plugin-card {
+    background: var(--secondary);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.plugin-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(100, 255, 218, 0.1);
+}
+
+.plugin-header {
+    background: rgba(100, 255, 218, 0.1);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.plugin-header i {
+    font-size: 2em;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.plugin-header h3 {
+    color: var(--text);
+    margin: 10px 0;
+}
+
+.version {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(100, 255, 218, 0.2);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8em;
+    color: var(--accent);
+}
+
+.plugin-content {
+    padding: 20px;
+}
+
+.plugin-features {
+    margin: 20px 0;
+}
+
+.plugin-features h4 {
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.plugin-features ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.plugin-features li {
+    color: var(--text-secondary);
+    margin: 5px 0;
+    position: relative;
+}
+
+.plugin-features li::before {
+    content: '→';
+    color: var(--accent);
+    position: absolute;
+    left: -20px;
+}
+
+.plugin-meta {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    color: var(--text-secondary);
+}
+
+.plugin-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.plugin-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.plugin-link {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.plugin-link.docs {
+    background: rgba(100, 255, 218, 0.1);
+    color: var(--accent);
+}
+
+.plugin-link.download {
+    background: var(--accent);
+    color: var(--primary);
+}
+
+.plugin-link:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .plugins-header {
+        padding: 80px 20px;
+    }
+
+    .plugin-meta {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Stats Grid Styles */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.stat-card {
+    background: rgba(17, 34, 64, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 25px;
+    display: flex;
+    gap: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(100, 255, 218, 0.1);
+    border-color: var(--accent);
+}
+
+.stat-icon {
+    background: rgba(100, 255, 218, 0.1);
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8em;
+    color: var(--accent);
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover .stat-icon {
+    background: var(--accent);
+    color: var(--primary);
+    transform: scale(1.1);
+}
+
+.stat-info {
+    flex: 1;
+}
+
+.stat-number {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--text);
+    margin-bottom: 5px;
+    background: linear-gradient(45deg, var(--accent), #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stat-label {
+    color: var(--accent);
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.stat-description {
+    color: var(--text-secondary);
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+/* Add animation for numbers */
+@keyframes countUp {
+    from {
+        content: attr(data-count);
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 
+
+/* Enhanced Plugin Card Styles */
+.plugin-card .fas.fa-bolt {
+    color: #ffd700;
+    animation: thunderGlow 2s infinite;
+}
+
+@keyframes thunderGlow {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+    }
+}
+
+.plugin-meta i {
+    margin-right: 5px;
+}
+
+.plugin-links a i {
+    margin-right: 8px;
+}
+
+.plugin-features ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.plugin-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.plugin-features li::before {
+    content: '⚡';
+    position: static;
+    color: #ffd700;
+} 
+
+/* Compost Manager specific styles */
+.plugin-card .fas.fa-recycle {
+    color: #4CAF50;
+    animation: recycleGlow 3s infinite;
+}
+
+@keyframes recycleGlow {
+    0%, 100% {
+        transform: rotate(0deg);
+        text-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+    }
+    50% {
+        transform: rotate(180deg);
+        text-shadow: 0 0 20px rgba(76, 175, 80, 0.8);
+    }
+}
+
+/* Add organic style to the compost manager card */
+.plugin-card:has(.fa-recycle) .plugin-features li::before {
+    content: '🌱';
+    color: #4CAF50;
+}
+
+.plugin-card:has(.fa-recycle):hover {
+    border-color: #4CAF50;
+}
+
+.plugin-card:has(.fa-recycle) .plugin-meta span i {
+    color: #4CAF50;
+} 

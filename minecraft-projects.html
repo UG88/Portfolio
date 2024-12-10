@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNTILGAMER | Minecraft Projects</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/minecraft.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-graphics">
+        <!-- Grid lines -->
+        <div class="grid-line horizontal" style="top: 20%"></div>
+        <div class="grid-line horizontal" style="top: 40%"></div>
+        <div class="grid-line horizontal" style="top: 60%"></div>
+        <div class="grid-line horizontal" style="top: 80%"></div>
+        
+        <div class="grid-line vertical" style="left: 20%"></div>
+        <div class="grid-line vertical" style="left: 40%"></div>
+        <div class="grid-line vertical" style="left: 60%"></div>
+        <div class="grid-line vertical" style="left: 80%"></div>
+        
+        <!-- Particles -->
+        <div class="particle" style="top: 15%; left: 25%"></div>
+        <div class="particle" style="top: 35%; left: 65%"></div>
+        <div class="particle" style="top: 75%; left: 45%"></div>
+        <div class="particle" style="top: 85%; left: 15%"></div>
+        <div class="particle" style="top: 45%; left: 85%"></div>
+    </div>
+
+    <nav class="nav">
+        <div class="nav-content">
+            <div class="logo">
+                <span class="logo-text">UG</span>
+                <span class="logo-number">88</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#overview">Overview</a>
+                <a href="#minecraft-projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="overview" class="minecraft-header">
+        <div class="header-content">
+            <h1>Minecraft Projects</h1>
+            <p class="header-subtitle">Explore my collection of Minecraft development work</p>
+            <div class="header-stats">
+                <div class="stat-item">
+                    <i class="fas fa-code-branch"></i>
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-download"></i>
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Downloads</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-star"></i>
+                    <span class="stat-number">4.8</span>
+                    <span class="stat-label">Rating</span>
+                </div>
+            </div>
+        </div>
+        <div class="header-decoration">
+            <div class="minecraft-cube"></div>
+        </div>
+    </header>
+
+    <nav class="project-navigation">
+        <div class="nav-wrapper">
+            <h2 class="nav-title">Project Categories</h2>
+            <div class="minecraft-categories" id="minecraft-projects">
+                <button class="category-button active" data-category="all">
+                    <i class="fas fa-th"></i> All Projects
+                </button>
+                <button class="category-button" data-category="plugins">
+                    <i class="fas fa-puzzle-piece"></i> Plugins
+                </button>
+                <button class="category-button" data-category="mods">
+                    <i class="fas fa-cube"></i> Mods
+                </button>
+                <button class="category-button" data-category="servers">
+                    <i class="fas fa-server"></i> Server Setup
+                </button>
+                <button class="category-button" data-category="configs">
+                    <i class="fas fa-cogs"></i> Configurations
+                </button>
+                <button class="category-button" data-category="datapacks">
+                    <i class="fas fa-database"></i> Datapacks
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="minecraft-grid">
+        <div class="minecraft-project" data-category="plugins">
+            <a href="plugins.html" class="project-link">
+                <div class="project-icon">
+                    <i class="fas fa-puzzle-piece"></i>
+                </div>
+                <div class="project-content">
+                    <h3>Custom Plugins</h3>
+                    <p>Advanced server management and gameplay enhancement plugins.</p>
+                    <div class="project-tags">
+                        <span>Java</span>
+                        <span>Spigot API</span>
+                        <span>Paper API</span>
+                    </div>
+                    <div class="view-more">
+                        <span>View All Plugins</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="minecraft-project" data-category="mods">
+            <div class="project-icon">
+                <i class="fas fa-cube"></i>
+            </div>
+            <div class="project-content">
+                <h3>Custom Mods</h3>
+                <p>Comprehensive mod pack with new mechanics and features.</p>
+                <div class="project-tags">
+                    <span>Forge</span>
+                    <span>Fabric</span>
+                    <span>ModLoader</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="minecraft-project" data-category="servers">
+            <div class="project-icon">
+                <i class="fas fa-server"></i>
+            </div>
+            <div class="project-content">
+                <h3>Server Configuration</h3>
+                <p>Optimized server settings and performance configurations.</p>
+                <div class="project-tags">
+                    <span>Performance</span>
+                    <span>Security</span>
+                    <span>Optimization</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="minecraft-project" data-category="configs">
+            <div class="project-icon">
+                <i class="fas fa-cogs"></i>
+            </div>
+            <div class="project-content">
+                <h3>Plugin Configurations</h3>
+                <p>Custom configurations for popular plugins and server optimization.</p>
+                <div class="project-tags">
+                    <span>YAML</span>
+                    <span>Optimization</span>
+                    <span>Setup</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="minecraft-project" data-category="datapacks">
+            <div class="project-icon">
+                <i class="fas fa-database"></i>
+            </div>
+            <div class="project-content">
+                <h3>Custom Datapacks</h3>
+                <p>Vanilla-friendly data packs for enhanced gameplay features.</p>
+                <div class="project-tags">
+                    <span>JSON</span>
+                    <span>MCFunction</span>
+                    <span>Vanilla</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="contact" class="contact">
+        <h2 class="section-title">Minecraft Community</h2>
+        <div class="social-links">
+            <a href="https://discord.gg/your-server" class="social-link" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-discord"></i>
+                <span>Discord</span>
+            </a>
+            <a href="https://github.com/ug88" class="social-link" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+            </a>
+            <a href="https://www.spigotmc.org/members/untilgamer.2179357" class="social-link" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-cube"></i>
+                <span>SpigotMC</span>
+            </a>
+            <a href="https://www.planetminecraft.com/your-profile" class="social-link" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-globe"></i>
+                <span>Planet Minecraft</span>
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="copyright">
+            <div class="creator">Made by UNTILGAMER (UG88)</div>
+            <div class="year">© 2024 All Rights Reserved</div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
