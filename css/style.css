@@ -811,6 +811,12 @@ section {
     margin-bottom: 15px;
 }
 
+.skill-category h3 .sub-text {
+    font-size: 0.7em;
+    color: var(--text-secondary);
+    font-weight: normal;
+}
+
 .skill-category ul {
     list-style: none;
     padding: 0;
@@ -907,4 +913,69 @@ section {
 
 .nav-links a.active::after {
     width: 100%;
+}
+
+/* About Section Styles */
+.about-details {
+    margin: 20px 0;
+    color: var(--text);
+}
+
+.about-list {
+    list-style: none;
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+.about-list li {
+    color: var(--text-secondary);
+    margin: 10px 0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.about-list li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+.about-mission {
+    margin-top: 20px;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* Timeline Details */
+.timeline-details {
+    list-style: none;
+    padding-left: 15px;
+    margin-top: 10px;
+}
+
+.timeline-details li {
+    color: var(--text-secondary);
+    font-size: 0.9em;
+    margin: 5px 0;
+    position: relative;
+    padding-left: 20px;
+}
+
+.timeline-details li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+.spigot-icon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='currentColor' d='M256 32c17.7 0 32 14.3 32 32v32h-64V64c0-17.7 14.3-32 32-32zm-96 96h192c17.7 0 32 14.3 32 32v192c0 17.7-14.3 32-32 32H160c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-right: 8px;
 }

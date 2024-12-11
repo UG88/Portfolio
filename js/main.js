@@ -176,4 +176,67 @@ function animateNumbers() {
         
         observer.observe(stat);
     });
-} 
+}
+
+// Plugin category filter with smooth transitions
+document.querySelectorAll('.plugin-categories .category-button').forEach(button => {
+    button.addEventListener('click', () => {
+        // Update active button
+        document.querySelectorAll('.plugin-categories .category-button').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        button.classList.add('active');
+
+        // Filter plugins
+        const category = button.dataset.category;
+        const plugins = document.querySelectorAll('.plugin-card');
+        
+        plugins.forEach(plugin => {
+            // Reset expanded state and details view when switching categories
+            plugin.classList.remove('expanded');
+            const details = plugin.querySelector('.plugin-details');
+            if (details) {
+                details.classList.remove('active');
+            }
+            
+            if (category === 'all' || plugin.dataset.category === category) {
+                plugin.style.display = 'block';
+                setTimeout(() => {
+                    plugin.style.opacity = '1';
+                    plugin.style.transform = 'translateY(0)';
+                }, 50);
+            } else {
+                plugin.style.opacity = '0';
+                plugin.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    plugin.style.display = 'none';
+                }, 300);
+            }
+        });
+    });
+});
+
+// Handle view details button clicks
+document.querySelectorAll('.view-details-btn').forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const card = button.closest('.plugin-card');
+        const details = card.querySelector('.plugin-details');
+        
+        if (!details.classList.contains('active')) {
+            // Show details
+            details.style.display = 'block';
+            setTimeout(() => {
+                details.classList.add('active');
+            }, 10);
+            button.textContent = 'Hide Details';
+        } else {
+            // Hide details
+            details.classList.remove('active');
+            setTimeout(() => {
+                details.style.display = 'none';
+            }, 300);
+            button.textContent = 'View Details';
+        }
+    });
+}); 
